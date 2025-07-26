@@ -361,13 +361,13 @@ p {
 }
 
 .details h1 {
-    
+
     display: inline-block;
     color: white;
     font-weight: 600;
     font-size: 4em;
     padding: 100px;
-    
+
 
 }
 
@@ -401,7 +401,8 @@ p {
     height: 100%;
     overflow: hidden;
     white-space: nowrap;
-    border: 2px solid aqua; /* Puedes cambiar esto también por degradado si lo deseas */
+    border: 2px solid aqua;
+    /* Puedes cambiar esto también por degradado si lo deseas */
     box-sizing: border-box;
     border-radius: 10px;
     padding: 5px 10px;
@@ -419,12 +420,13 @@ p {
 
 @keyframes animate-detail {
 
-    0%, 10%
-    100% {
+    0%,
+    10% 100% {
         width: 0px;
     }
 
-    70%, 90% {
+    70%,
+    90% {
         width: 100%;
     }
 }
@@ -493,7 +495,35 @@ p {
 
 }
 
+.post .postHead {
+    background: linear-gradient(90deg, aqua, #0e6aff);
+    border-radius: 10px 10px 0px 0px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    padding: 10px;
+}
+
 .post img {
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid white;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(0, 255, 255), 0 0 15px rgba(14, 106, 255);
+}
+
+.post .postContent {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow:
+        0 0 0 2px aqua,
+        /* sombra exterior para simular borde */
+        0 0 15px rgba(0, 255, 255, 0.6),
+        0 0 25px rgb(14, 106, 255);
 }
