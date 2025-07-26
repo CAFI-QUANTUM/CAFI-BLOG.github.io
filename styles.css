@@ -1,0 +1,499 @@
+/* ESTILOS MAS GENERALES */
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(59, 0, 0), rgb(0, 0, 66));
+    background: black;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+/* ESTILOS DEL HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: auto;
+    align-items: center;
+    background-color: #202020;
+    padding: 10px 10px;
+
+}
+
+.header .headerContainer {
+    padding: 10px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: rgba(0, 0, 0. 0.2);
+    z-index: 1000;
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    background: linear-gradient(90deg, aqua, #1500ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 50px aqua, 0 0 60px, 0 0 70px #1500ff;
+    margin: 0;
+}
+
+
+
+.header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header ul li {
+    list-style: none;
+}
+
+.header ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 30px;
+    z-index: 1000;
+
+}
+
+.header ul li a ion-icon {
+    font-size: 1.5em;
+    pointer-events: none;
+    opacity: 0.25;
+    transition: 0.25s;
+}
+
+.header ul li:hover a ion-icon {
+    color: white;
+    opacity: 1;
+
+}
+
+.header ul li.active a ion-icon {
+    color: aqua;
+    opacity: 1;
+    filter: drop-shadow(0 0 3px rgb(14, 106, 255)) drop-shadow(0 0 10px aqua);
+}
+
+
+.header #light {
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.header #light::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 60px;
+    background: linear-gradient(180deg, #fefefe00, rgba(215, 254, 255, 0.328));
+    clip-path: polygon(0% 0%, 50% 150%, 100% 0%);
+}
+
+.header #marker {
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.header #marker::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    border-radius: 24px;
+    background: aqua;
+}
+
+.header input[type="button"] {
+    background: transparent;
+    border: 2px solid aqua;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 8px aqua;
+    transition: all 0.3s ease;
+}
+
+.header input[type="button"]:hover {
+    background: aqua;
+    color: #000;
+    box-shadow: 0 0 20px aqua, 0 0 30px #0e6aff;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* ESTILOS DE LA PRIMERA SECCIÓN START */
+
+.start {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 18% 18%;
+    /* Espaciado interno */
+    box-sizing: border-box;
+    display: block;
+    background: transparent;
+    text-align: center;
+
+}
+
+.start h1 {
+    font-size: 2.5em;
+    background: white;
+    text-shadow: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.start p {
+    font-size: 1.5em;
+    background: white;
+    text-shadow: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .start {
+        padding: 48% 8%;
+    }
+}
+
+/* ESTILOS PARA PERFIL DE INTEGRANTES DEL EQUIPO */
+
+
+.team {
+    padding: 30px 0;
+}
+
+.team h1 {
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.profiles {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    min-height: 380px;
+    min-width: 250px;
+    height: 450px;
+    width: 270px;
+    position: relative;
+    background: radial-gradient(140% 140% at 0% 0%,
+            rgba(44, 44, 44, 1) 0%,
+            rgba(33, 33, 33, .5) 100%);
+    border: 3px solid#323232;
+    border-radius: 30px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 15px 25px rgba(65, 65, 65, 0.3);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.profileContainer {
+    position: relative;
+    min-height: 360px;
+    min-width: 230px;
+    height: 410px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background: rgba(0, 0, 0. 0.2);
+    z-index: 1000;
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+
+}
+
+.profile img {
+    position: absolute;
+    top: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    height: 40%;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0, 255, 255), 0 0 30px rgba(14, 106, 255);
+}
+
+.profile h1 {
+    font-size: 20px;
+    padding-top: 100px;
+    color: white;
+    text-align: center;
+}
+
+.profile p {
+    color: white;
+    text-align: center;
+}
+
+
+.profile .socials {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0. 1);
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.profile .socials li {
+    list-style: none;
+}
+
+.profile .socials li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 30px;
+    z-index: 1000;
+
+}
+
+.profile .socials li a ion-icon {
+    font-size: 1.5em;
+    pointer-events: none;
+    transition: 0.25s;
+}
+
+.profile .socials li:hover a ion-icon {
+    color: aqua;
+    filter: drop-shadow(0 0 3px rgb(14, 106, 255)) drop-shadow(0 0 10px aqua);
+
+}
+
+@media screen and (max-width: 768px) {
+    .profiles {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* detalllleeees */
+
+.details {
+    padding: 100px 0px;
+    text-align: center;
+}
+
+.detail {
+    padding: 100px 0px;
+    display: flex;
+    flex-: wrwrapap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+.details h1,
+h3,
+p {
+    color: white;
+}
+
+.details h1 {
+    
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    font-size: 4em;
+    padding: 100px;
+    
+
+}
+
+.details h1 span {
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px aqua;
+    line-height: 1.2em;
+    padding: 5px 10px;
+    animation: displayText 12s infinite;
+    animation-delay: calc(-3s * var(--i));
+}
+
+@keyframes displayText {
+    0% {
+        display: inline-block;
+    }
+
+    25%,
+    100% {
+        display: none;
+    }
+}
+
+.details h1 span::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 2px solid aqua; /* Puedes cambiar esto también por degradado si lo deseas */
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 5px 10px;
+    animation: animate-detail 3s linear infinite;
+    filter: drop-shadow(0 0 5px aqua) drop-shadow(0 0 5px aqua);
+
+    /* AÑADIDO PARA DEGRADADO EN TEXTO */
+    background: linear-gradient(90deg, aqua, #0e6aff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@keyframes animate-detail {
+
+    0%, 10%
+    100% {
+        width: 0px;
+    }
+
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+.content {
+    width: 60%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphic {
+    width: 30%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphic img {
+    height: 70%;
+    width: 70%;
+    max-width: 400px;
+    position: relative;
+
+
+}
+
+
+/* ESTILOS DEL BLOGGGG */
+
+.blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogContainer {
+    position: relative;
+    width: 90%;
+    height: 700px;
+    background: #2c2c2c;
+    border-radius: 15px;
+    border: 8px solid rgb(21, 21, 21);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.post {
+    position: absolute;
+    inset: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: rgba(0, 0, 0. 0.2);
+    z-index: 1000;
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+
+}
+
+.post img {
+    border-radius: 50%;
+    border: 3px solid black;
+}
