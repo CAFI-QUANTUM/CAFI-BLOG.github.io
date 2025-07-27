@@ -10,7 +10,7 @@
 
 body {
     background: linear-gradient(90deg, rgb(59, 0, 0), rgb(0, 0, 66));
-    background: black;
+    background: #111;
     background-size: cover;
     font-family: 'Segoe UI', sans-serif;
     align-items: center;
@@ -341,17 +341,12 @@ body {
 /* detalllleeees */
 
 .details {
-    padding: 100px 0px;
+
+    padding: 100px 5%;
     text-align: center;
+    z-index: 1;
 }
 
-.detail {
-    padding: 100px 0px;
-    display: flex;
-    flex-: wrwrapap;
-    gap: 2rem;
-    justify-content: center;
-}
 
 
 .details h1,
@@ -421,7 +416,8 @@ p {
 @keyframes animate-detail {
 
     0%,
-    10% 100% {
+    10%,
+    100% {
         width: 0px;
     }
 
@@ -431,32 +427,76 @@ p {
     }
 }
 
-.content {
-    width: 60%;
+
+.detail {
+    position: relative;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    height: 200px;
+    display: flex; /* CLAVE: convierte a flexbox */
+    flex-direction: row; /* para que el gráfico y el texto estén lado a lado */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 75px;
+    background: #323232;
+    box-shadow: 
+        inset 10px 10px 20px rgba(255, 255, 255, 0.1),
+        10px 10px 20px black,
+        20px 20px 40px black,
+        inset -10px -10px 20px black;
+}
+
+.detail .content {
+    width: 50%;
+    color: white;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .graphic {
-    width: 30%;
+    width: 170px;
+    height: 170px;
+    background: #222;
+    border-radius: 50%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.graphic img {
-    height: 70%;
-    width: 70%;
-    max-width: 400px;
+    z-index: 1;
     position: relative;
+    box-shadow:
+        1px 2px 1px 1px rgba(0, 0, 0, .5),
+        0 0 0 2px white,
+        -5px 10px 15px rgba(0, 0, 0, .5),
+        0 0 15px rgb(0, 255, 255),
+        0 0 25px rgb(14, 106, 255);
+}
 
+
+
+.graphic::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #333;
+    border: 15px solid #888;
+    border-radius: 50%;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.75),
+        0 -2px 2px rgba(255, 255, 255, 0.75),
+        inset 0 4px 2px rgba(0, 0, 0, 0.25), inset 0 -2px 2px rgba(255, 255, 255, .75)
 
 }
+
 
 
 /* ESTILOS DEL BLOGGGG */
@@ -481,6 +521,7 @@ p {
 }
 
 .post {
+    
     position: absolute;
     inset: 60px;
     display: flex;
@@ -489,13 +530,14 @@ p {
     flex-direction: column;
     border-radius: 10px;
     background: rgba(0, 0, 0. 0.2);
-    z-index: 1000;
+    z-index: 1;
     box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 
 }
 
 .post .postHead {
+    z-index: 1;
     background: linear-gradient(90deg, aqua, #0e6aff);
     border-radius: 10px 10px 0px 0px;
     position: absolute;
@@ -507,6 +549,7 @@ p {
 }
 
 .post img {
+    z-index: 1;
     border-radius: 50%;
     border: 3px solid white;
     object-fit: cover;
@@ -514,6 +557,7 @@ p {
 }
 
 .post .postContent {
+    z-index: 1;
     position: absolute;
     top: 30px;
     left: 30px;
