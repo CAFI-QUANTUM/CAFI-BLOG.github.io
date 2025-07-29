@@ -1,5 +1,4 @@
 /* ESTILOS MAS GENERALES */
-
 * {
     padding: 0;
     margin: 0;
@@ -8,14 +7,37 @@
     box-sizing: border-box;
 }
 
+.doto-<uniquifier> {
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "ROND" 0;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "ROND" 0;
+}
+
 body {
     background: linear-gradient(90deg, rgb(59, 0, 0), rgb(0, 0, 66));
-    background: #111;
+    background: #000;
     background-size: cover;
     font-family: 'Segoe UI', sans-serif;
     align-items: center;
     justify-content: center;
 }
+
+
 
 #particles-js {
     width: 100%;
@@ -33,8 +55,10 @@ body {
     z-index: 1000;
     height: auto;
     align-items: center;
-    background-color: #202020;
+    background-color: #000000;
     padding: 10px 10px;
+    box-shadow: 0px 25px 45px rgb(0, 0, 0);
+
 
 }
 
@@ -59,8 +83,6 @@ body {
     text-shadow: 0 0 50px aqua, 0 0 60px, 0 0 70px #1500ff;
     margin: 0;
 }
-
-
 
 .header ul {
     position: relative;
@@ -102,7 +124,6 @@ body {
     opacity: 1;
     filter: drop-shadow(0 0 3px rgb(14, 106, 255)) drop-shadow(0 0 10px aqua);
 }
-
 
 .header #light {
     position: absolute;
@@ -175,13 +196,12 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    padding: 18% 18%;
+    padding: 20% 0%;
     /* Espaciado interno */
     box-sizing: border-box;
     display: block;
     background: transparent;
     text-align: center;
-
 }
 
 .start h1 {
@@ -209,12 +229,6 @@ body {
 }
 
 /* ESTILOS PARA PERFIL DE INTEGRANTES DEL EQUIPO */
-
-
-.team {
-    padding: 30px 0;
-}
-
 .team h1 {
     color: white;
     padding: 30px 0;
@@ -229,8 +243,8 @@ body {
 }
 
 .profile {
-    min-height: 380px;
-    min-width: 250px;
+    min-height: 450px;
+    min-width: 270px;
     height: 450px;
     width: 270px;
     position: relative;
@@ -248,12 +262,11 @@ body {
 
 }
 
-
 .profileContainer {
     position: relative;
-    min-height: 360px;
+    min-height: 410px;
     min-width: 230px;
-    height: 410px;
+    height: 230px;
     width: 230px;
     display: flex;
     justify-content: center;
@@ -289,7 +302,6 @@ body {
     color: white;
     text-align: center;
 }
-
 
 .profile .socials {
     position: absolute;
@@ -331,7 +343,7 @@ body {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .profiles {
         flex-direction: column;
         gap: 10px;
@@ -341,13 +353,10 @@ body {
 /* detalllleeees */
 
 .details {
-
-    padding: 100px 5%;
     text-align: center;
     z-index: 1;
+    padding: 0px 60px;
 }
-
-
 
 .details h1,
 h3,
@@ -360,7 +369,7 @@ p {
     display: inline-block;
     color: white;
     font-weight: 600;
-    font-size: 4em;
+    font-size: 2.5em;
     padding: 100px;
 
 
@@ -412,6 +421,17 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
+.details .head {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 18% 0%;
+    /* Espaciado interno */
+    box-sizing: border-box;
+    display: block;
+    background: transparent;
+    text-align: center;
+}
 
 @keyframes animate-detail {
 
@@ -427,25 +447,40 @@ p {
     }
 }
 
-
 .detail {
+    padding: 20px;
     position: relative;
     margin-bottom: 2rem;
     margin-top: 2rem;
     width: 100%;
-    height: 200px;
-    display: flex; /* CLAVE: convierte a flexbox */
-    flex-direction: row; /* para que el gráfico y el texto estén lado a lado */
+    height: 180px;
+    display: flex;
+    /* CLAVE: convierte a flexbox */
+    flex-direction: row;
+    /* para que el gráfico y el texto estén lado a lado */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 110px;
+    background: #323232;
+}
+
+.detail::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    border-radius: 75px;
-    background: #323232;
-    box-shadow: 
-        inset 10px 10px 20px rgba(255, 255, 255, 0.1),
-        10px 10px 20px black,
-        20px 20px 40px black,
-        inset -10px -10px 20px black;
+    flex-direction: column;
+    border-radius: 100px;
+    background: rgba(0, 0, 0. 0.2);
+    z-index: 0;
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .detail .content {
@@ -458,12 +493,23 @@ p {
     justify-content: center;
     padding: 20px;
     border-radius: 20px;
+    z-index: 1;
+}
+
+@property --a {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
 }
 
 .graphic {
-    width: 170px;
-    height: 170px;
-    background: #222;
+    width: 140px;
+    height: 140px;
+    border: 3px solid aqua;
+    background: repeating-conic-gradient(from var(--a), rgba(0, 255, 255, .8) 0%,
+            rgba(0, 255, 255, .8) 10%, rgba(0, 200, 255, .8) 20%, rgba(0, 200, 255, .8) 40%, rgba(0, 255, 255, .8) 50%);
+    filter: drop-shadow(0 15px 50px black);
+
     border-radius: 50%;
     box-sizing: border-box;
     display: flex;
@@ -472,32 +518,80 @@ p {
     justify-content: center;
     z-index: 1;
     position: relative;
-    box-shadow:
-        1px 2px 1px 1px rgba(0, 0, 0, .5),
-        0 0 0 2px white,
-        -5px 10px 15px rgba(0, 0, 0, .5),
-        0 0 15px rgb(0, 255, 255),
-        0 0 25px rgb(14, 106, 255);
+    animation: rotating 4s linear infinite;
 }
 
+@keyframes rotating {
+    0% {
+        --a: 0deg;
+    }
 
+    100% {
+        --a: 360deg;
+    }
+}
 
 .graphic::after {
     content: "";
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 95px;
+    height: 95px;
     background: #333;
-    border: 15px solid #888;
+    border: 10px solid #4d4c51;
     border-radius: 50%;
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.75),
-        0 -2px 2px rgba(255, 255, 255, 0.75),
-        inset 0 4px 2px rgba(0, 0, 0, 0.25), inset 0 -2px 2px rgba(255, 255, 255, .75)
-
+        -2px 5px 5px rgba(0, 0, 0, 0.7),
+        0 -2px 2px rgba(255, 255, 255, 0.5),
+        inset 0 4px 2px rgba(0, 0, 0, 0.25), inset 0 -2px 2px rgba(255, 255, 255, .5)
 }
 
+.graphic img {
+    z-index: 2;
+    display: flex;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
 
+@media screen and (max-width: 768px) {
+    .details h1 {
+        font-size: 30px;
+    }
+
+    .detail {
+        min-width: 270px;
+        width: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border-radius: 135px 135px 0 0;
+
+    }
+
+    .detail::after {
+        border-radius: 125px 125px 0 0;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .detail .content {
+        order: 2;
+        padding: 50px 0px;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .detail .graphic {
+        order: 1;
+    }
+}
 
 /* ESTILOS DEL BLOGGGG */
 
@@ -505,6 +599,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 25% 0;
 }
 
 .blogContainer {
@@ -521,7 +616,7 @@ p {
 }
 
 .post {
-    
+
     position: absolute;
     inset: 60px;
     display: flex;

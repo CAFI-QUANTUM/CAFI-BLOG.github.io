@@ -1,8 +1,9 @@
 svg {
-    height: 90%;
-    width: 90%;
+    height: 80px;
+    width: 80px;
     max-width: 400px;
     position: relative;
+    z-index: 2;
 }
 
 path {
