@@ -30,3 +30,33 @@ list.forEach((item) => {
     active_link.call(this);
   });
 });
+
+
+
+
+
+
+
+const sections = document.querySelectorAll("section[id]");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const link = document.querySelector(`ul li a[href="#${id}"]`);
+
+      if (entry.isIntersecting) {
+        list.forEach((item) => item.classList.remove("active"));
+        if (link && link.parentElement) {
+          link.parentElement.classList.add("active");
+          move_indicator(link);
+        }
+      }
+    });
+  },
+  {
+    threshold: 0.6, // % de visibilidad de la sección para activarse
+  }
+);
+
+sections.forEach((section) => observer.observe(section));
