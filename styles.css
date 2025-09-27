@@ -629,8 +629,9 @@ p {
 
 .blogContainer {
     position: relative;
+    margin-left: 3%;
+    margin-right: 3%;
     flex-direction: column;
-    width: 100%;
     background: var(--fondo2);
     border-radius: 15px;
     border: 8px solid var(--sombra-oscura);
@@ -639,6 +640,7 @@ p {
     align-items: center;
     justify-content: center;
     padding: 60px;
+    gap: 50px;
 }
 
 .post {
@@ -667,6 +669,7 @@ p {
     display: flex;
     padding: 20px;
     color: var(--text-color);
+
 }
 
 .post .postHead .postUser {
@@ -725,11 +728,22 @@ p {
     padding: 10px;
 }
 
-.post .postContent .content-contained .another-div .demo-container img {
+.post .postContent .content-contained .another-div .demo-container img,
+.post .postContent .content-contained .another-div .demo-container video {
     display: block;
-    width: 100%;
+    width: 50%;
+    margin-left: 25%;
     height: auto;
     filter: blur(1px) brightness(40%);
+    border-radius: 0 0 10px 10px;
+}
+
+.post .postContent .content-contained .another-div .demo-containerjustit video,
+.post .postContent .content-contained .another-div .demo-containerjustit img {
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+    height: auto;
     border-radius: 0 0 10px 10px;
 }
 
@@ -746,5 +760,24 @@ p {
 @media screen and (max-width: 700px) {
     .post .postHead h2 {
         display: none;
+    }
+
+    .post .postContent .content-contained .another-div .demo-container img,
+    .post .postContent .content-contained .another-div .demo-container video {
+        display: block;
+        width: 100%;
+        margin-left: 0%;
+        height: auto;
+        filter: blur(1px) brightness(40%);
+        border-radius: 0 0 10px 10px;
+    }
+
+    .post .postContent .content-contained .another-div .demo-containerjustit video,
+    .post .postContent .content-contained .another-div .demo-containerjustit img {
+        display: block;
+        width: 100%;
+        margin-left: 0%;
+        height: auto;
+        border-radius: 0 0 10px 10px;
     }
 }
