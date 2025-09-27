@@ -35,7 +35,7 @@ div {
 }
 
 p {
-    font-size: 20px;
+    font-size: 15px;
     font-family: "Bitcount", sans-serif;
     padding: 20px 0px;
 }
@@ -73,20 +73,43 @@ html {
     left: 0;
     width: 100%;
     z-index: 1000;
-    height: auto;
+    height: 70px;
     align-items: center;
     background-color: var(--fondo2);
     padding: 10px 10px;
     box-shadow: 0px 25px 50px var(--fondo);
     margin-top: 0px;
     margin-bottom: 0px;
-
-
 }
 
-.header .headerContainer {
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+    align-items: center;
+    background-color: var(--fondo2);
+    padding: 10px 10px;
+    box-shadow: 0px -25px 50px var(--fondo);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.footer div {
+    display: flex;
+    gap: 10px;
+}
+
+.footer img {
+    border-radius: 50%;
+}
+
+.header .headerContainer,
+.footer .headerContainer {
     padding: 10px;
-    height: 62px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,8 +120,9 @@ html {
     border-bottom: 2px solid var(--sombra-clara);
 }
 
-.header h1 {
-    font-size: 2.5em;
+.header h1,
+.footer h1 {
+    font-size: 2em;
     background: linear-gradient(90deg, var(--neon-1), var(--neon-2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -157,18 +181,18 @@ html {
 .header #light::before {
     content: "";
     position: absolute;
-    top: 0px;
+    top: 9px;
     left: 50%;
     transform: translateX(-50%);
     width: 70px;
-    height: 60px;
+    height: 50px;
     background: linear-gradient(180deg, #00000000, rgba(215, 254, 255, 0.23));
     clip-path: polygon(0% 0%, 50% 150%, 100% 0%);
 }
 
 .header #marker {
     position: absolute;
-    top: 0;
+    top: -5px;
     transition: 0.5s;
     z-index: 1;
 }
@@ -189,7 +213,7 @@ input[type="button"] {
     background: transparent;
     border: 2px solid var(--neon-1);
     color: var(--text-color);
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 1em;
     text-transform: uppercase;
     border-radius: 10px;
